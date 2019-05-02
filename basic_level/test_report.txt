@@ -42,6 +42,421 @@ Introduce here the chromosome you want to analyze:
 
 --------LIST SPECIES PAGE /listSpecies ENDPOINT--------
 
+---http://localhost:8000/listSpecies---
+
+---TERMINAL---
+
+GET /listSpecies HTTP/1.1
+127.0.0.1 - - [02/May/2019 21:34:57] "GET /listSpecies HTTP/1.1" 200 -
+
+---BROWSER---
+
+WELCOME TO THE SPECIES PAGE
+
+The available species in the ensambl database are:
+
+1. Normal: ficedula_albicollis
+Common: Collared flycatcher
+2. Normal: castor_canadensis
+Common: American beaver
+3. Normal: ciona_intestinalis
+Common: Sea squirt Ciona intestinalis
+4. Normal: pogona_vitticeps
+Common: central bearded dragon
+5. Normal: manacus_vitellinus
+Common: golden-collared manakin
+6. Normal: mus_spicilegus
+Common: steppe mouse
+7. Normal: zonotrichia_albicollis
+Common: white-throated sparrow
+8. Normal: dipodomys_ordii
+Common: Ord's kangaroo rat
+9. Normal: nomascus_leucogenys
+Common: Northern white-cheeked gibbon
+10. Normal: mus_musculus_fvbnj
+Common: house mouse
+11. Normal: fundulus_heteroclitus
+Common: mummichog
+12. Normal: mus_spretus
+Common: algerian mouse
+13. Normal: poecilia_reticulata
+Common: guppy
+14. Normal: amphiprion_ocellaris
+Common: clown anemonefish
+15. Normal: meriones_unguiculatus
+Common: Mongolian gerbil
+16. Normal: saccharomyces_cerevisiae
+Common: baker's yeast
+17. Normal: paramormyrops_kingsleyae
+Common: Paramormyrops kingsleyae
+18. Normal: jaculus_jaculus
+Common: Lesser Egyptian jerboa
+19. Normal: mus_musculus_c3hhej
+Common: house mouse
+20. Normal: amphiprion_percula
+Common: orange clownfish
+21. Normal: erinaceus_europaeus
+Common: western European hedgehog
+22. Normal: phascolarctos_cinereus
+Common: koala
+23. Normal: acanthochromis_polyacanthus
+Common: spiny chromis
+24. Normal: lepidothrix_coronata
+Common: blue-crowned manakin
+25. Normal: neovison_vison
+Common: American mink
+26. Normal: cavia_porcellus
+Common: domestic guinea pig
+27. Normal: equus_caballus
+Common: horse
+28. Normal: dasypus_novemcinctus
+Common: nine-banded armadillo
+29. Normal: haplochromis_burtoni
+Common: Burton's mouthbrooder
+30. Normal: macaca_fascicularis
+Common: Crab-eating macaque
+31. Normal: coturnix_japonica
+Common: Japanese quail
+32. Normal: melopsittacus_undulatus
+Common: Budgie
+33. Normal: heterocephalus_glaber_male
+Common: naked mole-rat
+34. Normal: aotus_nancymaae
+Common: Ma's night monkey
+35. Normal: ursus_maritimus
+Common: Polar bear
+36. Normal: prolemur_simus
+Common: greater bamboo lemur
+37. Normal: poecilia_latipinna
+Common: sailfin molly
+38. Normal: kryptolebias_marmoratus
+Common: mangrove rivulus
+39. Normal: apteryx_haastii
+Common: Great spotted kiwi
+40. Normal: salvator_merianae
+Common: Argentine black and white tegu
+41. Normal: propithecus_coquereli
+Common: Coquerel's sifaka
+42. Normal: equus_asinus_asinus
+Common: donkey
+43. Normal: cavia_aperea
+Common: Brazilian guinea pig
+44. Normal: anas_platyrhynchos_platyrhynchos
+Common: common mallard
+45. Normal: danio_rerio
+Common: zebrafish
+46. Normal: peromyscus_maniculatus_bairdii
+Common: Northern American deer mouse
+47. Normal: serinus_canaria
+Common: common canary
+48. Normal: mesocricetus_auratus
+Common: Golden Hamster
+49. Normal: ictalurus_punctatus
+Common: channel catfish
+50. Normal: gambusia_affinis
+Common: western mosquitofish
+51. Normal: monopterus_albus
+Common: swamp eel
+52. Normal: lonchura_striata_domestica
+Common: Bengalese finch
+53. Normal: felis_catus
+Common: domestic cat
+54. Normal: ornithorhynchus_anatinus
+Common: platypus
+55. Normal: apteryx_owenii
+Common: little spotted kiwi
+56. Normal: sphenodon_punctatus
+Common: tuatara
+57. Normal: poecilia_mexicana
+Common: shortfin molly
+58. Normal: drosophila_melanogaster
+Common: fruit fly
+59. Normal: sarcophilus_harrisii
+Common: Tasmanian devil
+60. Normal: maylandia_zebra
+Common: zebra mbuna
+61. Normal: mus_musculus_wsbeij
+Common: western european house mouse
+62. Normal: labrus_bergylta
+Common: ballan wrasse
+63. Normal: parus_major
+Common: Great Tit
+64. Normal: numida_meleagris
+Common: helmeted guineafowl
+65. Normal: petromyzon_marinus
+Common: sea lamprey
+66. Normal: lepisosteus_oculatus
+Common: Spotted gar
+67. Normal: xiphophorus_couchianus
+Common: Monterrey platyfish
+68. Normal: nannospalax_galili
+Common: Upper Galilee mountains blind mole rat
+69. Normal: ochotona_princeps
+Common: American pika
+70. Normal: choloepus_hoffmanni
+Common: Hoffmann's two-fingered sloth
+71. Normal: pan_troglodytes
+Common: chimpanzee
+72. Normal: saimiri_boliviensis_boliviensis
+Common: Bolivian squirrel monkey
+73. Normal: mustela_putorius_furo
+Common: Domestic ferret
+74. Normal: gopherus_agassizii
+Common: Agassiz's desert tortoise
+75. Normal: urocitellus_parryii
+Common: Arctic ground squirrel
+76. Normal: mus_musculus_pwkphj
+Common: eastern european house mouse
+77. Normal: oryzias_latipes
+Common: Japanese medaka HdrR
+78. Normal: pteropus_vampyrus
+Common: large flying fox
+79. Normal: chelonoidis_abingdonii
+Common: Abingdon island giant tortoise
+80. Normal: rhinopithecus_bieti
+Common: Black snub-nosed monkey
+81. Normal: astyanax_mexicanus
+Common: Mexican tetra
+82. Normal: neolamprologus_brichardi
+Common: lyretail cichlid
+83. Normal: mus_musculus_casteij
+Common: south eastern house mouse
+84. Normal: echinops_telfairi
+Common: small Madagascar hedgehog
+85. Normal: taeniopygia_guttata
+Common: zebra finch
+86. Normal: loxodonta_africana
+Common: African savanna elephant
+87. Normal: cebus_capucinus
+Common: White-headed capuchin
+88. Normal: anolis_carolinensis
+Common: green anole
+89. Normal: ailuropoda_melanoleuca
+Common: giant panda
+90. Normal: spermophilus_dauricus
+Common: Daurian ground squirrel
+91. Normal: sus_scrofa
+Common: pig
+92. Normal: mus_musculus
+Common: house mouse
+93. Normal: mus_musculus_nzohlltj
+Common: house mouse
+94. Normal: calidris_pygmaea
+Common: Spoon-billed sandpiper
+95. Normal: notamacropus_eugenii
+Common: tammar wallaby
+96. Normal: hippocampus_comes
+Common: tiger tail seahorse
+97. Normal: bos_taurus
+Common: cattle
+98. Normal: bison_bison_bison
+Common: American bison
+99. Normal: mus_musculus_aj
+Common: house mouse
+100. Normal: oryzias_latipes_hsok
+Common: Japanese medaka HSOK
+101. Normal: pan_paniscus
+Common: bonobo
+102. Normal: gorilla_gorilla
+Common: Western Lowland Gorilla
+103. Normal: dromaius_novaehollandiae
+Common: emu
+104. Normal: apteryx_rowi
+Common: Okarito brown kiwi
+105. Normal: canis_familiaris
+Common: dog
+106. Normal: nothoprocta_perdicaria
+Common: birds
+107. Normal: cyprinodon_variegatus
+Common: sheepshead minnow
+108. Normal: cricetulus_griseus_picr
+Common: Chinese hamster
+109. Normal: vicugna_pacos
+Common: alpaca
+110. Normal: cyanistes_caeruleus
+Common: blue tit
+111. Normal: mastacembelus_armatus
+Common: zig-zag eel
+112. Normal: macaca_nemestrina
+Common: Pig-tailed macaque
+113. Normal: mus_caroli
+Common: Ryukyu mouse
+114. Normal: colobus_angolensis_palliatus
+Common: Angola colobus
+115. Normal: ovis_aries
+Common: Domestic sheep
+116. Normal: mandrillus_leucophaeus
+Common: Drill
+117. Normal: astatotilapia_calliptera
+Common: eastern happy
+118. Normal: oryzias_latipes_hni
+Common: Japanese medaka HNI
+119. Normal: gadus_morhua
+Common: Atlantic cod
+120. Normal: eptatretus_burgeri
+Common: Inshore hagfish
+121. Normal: carlito_syrichta
+Common: Philippine tarsier
+122. Normal: oryzias_melastigma
+Common: Indian medaka
+123. Normal: cercocebus_atys
+Common: Sooty mangabey
+124. Normal: gasterosteus_aculeatus
+Common: three-spined stickleback
+125. Normal: poecilia_formosa
+Common: Amazon molly
+126. Normal: mus_musculus_dba2j
+Common: house mouse
+127. Normal: mus_musculus_c57bl6nj
+Common: house mouse
+128. Normal: junco_hyemalis
+Common: dark-eyed junco
+129. Normal: cricetulus_griseus_chok1gshd
+Common: Chinese hamster
+130. Normal: xenopus_tropicalis
+Common: western clawed frog
+131. Normal: canis_lupus_dingo
+Common: dingo
+132. Normal: tursiops_truncatus
+Common: bottlenosed dolphin
+133. Normal: piliocolobus_tephrosceles
+Common: Ugandan red Colobus
+134. Normal: pygocentrus_nattereri
+Common: red-bellied piranha
+135. Normal: microcebus_murinus
+Common: gray mouse lemur
+136. Normal: amphilophus_citrinellus
+Common: Midas cichlid
+137. Normal: caenorhabditis_elegans
+Common: C.elegans
+138. Normal: tetraodon_nigroviridis
+Common: spotted green pufferfish
+139. Normal: pundamilia_nyererei
+Common: Makobe Island cichlid
+140. Normal: xiphophorus_maculatus
+Common: southern platyfish
+141. Normal: mus_pahari
+Common: Shrew mouse
+142. Normal: cricetulus_griseus_crigri
+Common: Chinese hamster
+143. Normal: chinchilla_lanigera
+Common: Long-tailed chinchilla
+144. Normal: procavia_capensis
+Common: cape rock hyrax
+145. Normal: mus_musculus_balbcj
+Common: house mouse
+146. Normal: heterocephalus_glaber_female
+Common: naked mole-rat
+147. Normal: calidris_pugnax
+Common: ruff
+148. Normal: chlorocebus_sabaeus
+Common: African green monkey
+149. Normal: capra_hircus
+Common: Goat
+150. Normal: otolemur_garnettii
+Common: small-eared galago
+151. Normal: latimeria_chalumnae
+Common: coelacanth
+152. Normal: anser_brachyrhynchus
+Common: pink-footed goose
+153. Normal: macaca_mulatta
+Common: rhesus monkey
+154. Normal: callithrix_jacchus
+Common: white-tufted-ear marmoset
+155. Normal: scophthalmus_maximus
+Common: turbot
+156. Normal: periophthalmus_magnuspinnatus
+Common: Periophthalmus magnuspinnatus
+157. Normal: pelodiscus_sinensis
+Common: Chinese softshell turtle
+158. Normal: panthera_pardus
+Common: leopard
+159. Normal: octodon_degus
+Common: Degu
+160. Normal: anabas_testudineus
+Common: climbing perch
+161. Normal: cynoglossus_semilaevis
+Common: tongue sole
+162. Normal: notechis_scutatus
+Common: mainland tiger snake
+163. Normal: mus_musculus_cbaj
+Common: house mouse
+164. Normal: oreochromis_niloticus
+Common: Nile tilapia
+165. Normal: theropithecus_gelada
+Common: gelada
+166. Normal: microtus_ochrogaster
+Common: vole
+167. Normal: takifugu_rubripes
+Common: torafugu
+168. Normal: crocodylus_porosus
+Common: Australian saltwater crocodile
+169. Normal: oryctolagus_cuniculus
+Common: rabbit
+170. Normal: bos_mutus
+Common: wild yak
+171. Normal: vulpes_vulpes
+Common: red fox
+172. Normal: stegastes_partitus
+Common: bicolor damselfish
+173. Normal: sorex_araneus
+Common: European shrew
+174. Normal: mus_musculus_akrj
+Common: house mouse
+175. Normal: seriola_dumerili
+Common: greater amberjack
+176. Normal: gallus_gallus
+Common: chicken
+177. Normal: mus_musculus_nodshiltj
+Common: house mouse
+178. Normal: chrysemys_picta_bellii
+Common: Western painted turtle
+179. Normal: papio_anubis
+Common: Olive baboon
+180. Normal: marmota_marmota_marmota
+Common: Alpine marmot
+181. Normal: pongo_abelii
+Common: Bornean orangutan
+182. Normal: scleropages_formosus
+Common: Asian bonytongue
+183. Normal: ictidomys_tridecemlineatus
+Common: thirteen-lined ground squirrel
+184. Normal: ciona_savignyi
+Common: Sea squirt Ciona savignyi
+185. Normal: rhinopithecus_roxellana
+Common: Golden snub-nosed monkey
+186. Normal: esox_lucius
+Common: northern pike
+187. Normal: meleagris_gallopavo
+Common: domestic turkey
+188. Normal: mus_musculus_lpj
+Common: house mouse
+189. Normal: fukomys_damarensis
+Common: Damara mole rat
+190. Normal: panthera_tigris_altaica
+Common: Tiger
+191. Normal: seriola_lalandi_dorsalis
+Common: yellowtail amberjack
+192. Normal: mola_mola
+Common: ocean sunfish
+193. Normal: ursus_americanus
+Common: American black bear
+194. Normal: tupaia_belangeri
+Common: northern tree shrew
+195. Normal: monodelphis_domestica
+Common: gray short-tailed opossum
+196. Normal: rattus_norvegicus
+Common: Norway rat
+197. Normal: mus_musculus_129s1svimj
+Common: house mouse
+198. Normal: homo_sapiens
+Common: human
+199. Normal: myotis_lucifugus
+Common: little brown bat
+
+Click here to go to the home page
+
+
 ---NO LIMIT---
 
 http://localhost:8000/listSpecies?limit=
@@ -647,6 +1062,7 @@ Click here to go to the home page
 ---HUMAN CHROMOSOME X---
 
 http://localhost:8000/chromosomeLength?specie=human&chromo=x
+http://localhost:8000/chromosomeLength?chromo=x&specie=human
 
 --TERMINAL--
 
@@ -668,6 +1084,8 @@ Click here to go to the home page
 ---CHICKEN CHROMOSOME 10---
 
 http://localhost:8000/chromosomeLength?specie=CHICKEN&chromo=10
+http://localhost:8000/chromosomeLength?chromo=10&specie=chicken
+
 
 --TERMINAL--
 

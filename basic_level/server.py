@@ -49,8 +49,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                 f = open("index.html", 'r')
                 contents = f.read()
 
-            # Now, if the request starts with /listSpecies or /karyotype or /chromosomeLength, which occurs when we submit a message, then the thing is different
-
+            #We need to enable the /listSpecies resource without limits
             elif self.path.startswith("/listSpecies") and self.path.endswith("/listSpecies"):
 
                 try:
@@ -128,6 +127,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     contents = f.read()
                     f.close()
 
+            # Now, if the request starts with /listSpecies or /karyotype or /chromosomeLength, which occurs when we submit a message, then the thing is different
             elif self.path.startswith("/listSpecies") or self.path.startswith("/karyotype") or self.path.startswith("/chromosomeLength"):
 
                 # Now we are going to make a list from the path in order to be able to work with different resources
@@ -335,9 +335,15 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                                 only_element = ' '.join(second_list[element])
                                 second_list[element] = only_element
 
-                        introduced_species = second_list[0]
+                        #The result will be the same if we write http://localhost:8000/chromosomeLength?chromo=4&specie=horse than
+                        #if we wrote http://localhost:8000/chromosomeLength?specie=horse&chromo=4
+                        if form_list[0] == "specie":
+                            introduced_species = second_list[0]
+                            chromo = second_list[1]
 
-                        chromo = second_list[1]
+                        else:
+                            introduced_species = second_list[1]
+                            chromo = second_list[0]
 
                         chromo = chromo.upper()
 
