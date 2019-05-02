@@ -233,7 +233,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         contents = f.read()
                         f.close()
 
-                elif form_list[0] =='specie' and self.path.startswith("/karyotype"):
+                elif self.path.startswith("/karyotype"):
 
                     # It's possible that the species does not exit, so we make a try/except to avoid arising errors
 
@@ -317,7 +317,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         contents = f.read()
                         f.close()
 
-                elif form_list[0] == 'specie' and self.path.startswith("/chromosomeLength"):
+                elif self.path.startswith("/chromosomeLength"):
 
                     try:
                         # Transform the request path into something we can work with
