@@ -488,6 +488,7 @@ Handler = TestHandler
 # -- Open the socket server
 with socketserver.TCPServer(("", PORT), Handler) as httpd:
 
+    print("BASIC SERVER")
     print("Serving at PORT", PORT)
 
     #Main loop: attend the client. Whenever there is a new client, the handler is called
