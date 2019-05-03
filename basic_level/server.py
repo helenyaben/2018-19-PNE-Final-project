@@ -30,6 +30,7 @@ import requests, sys
 
 # Now we define the server's port
 PORT = 8000
+socketserver.TCPServer.allow_reuse_address = True
 
 class TestHandler(http.server.BaseHTTPRequestHandler):
 
@@ -136,7 +137,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                 form_list = resource_list.split("=", 1)
                 #form_list[0] allows us to get the first parameter of our path and then work with different responses depending on the resources
 
-                if form_list[0] == "limit":
+                if self.path.startswith("/listSpecies"):
 
                     try:
                         # Has the client set a limit?
