@@ -1,0 +1,1441 @@
+
+[==========TEST REPORT: MEDIUM LEVEL=========]
+
+
+
+--------INDEX PAGE / ENDPOINT---------
+
+http://localhost:8000/
+
+---TERMINAL---
+
+Serving at PORT 8000
+GET / HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:18:44] "GET / HTTP/1.1" 200 -
+
+---BROWSER---
+
+Welcome to the ensembl analysis program
+
+Here you have some operations to perform:
+
+(1) List of species
+
+Click here to know the available species in the ensembl database
+Set a number of maximum species you want to get (optional):
+
+
+(2) Karyotype
+
+Introduce here the species you want to get the karyotype from:
+
+
+(3) Chromosome length
+
+Introduce here the species you want to get the info from:
+
+Introduce here the chromosome you want to analyze:
+
+
+(4) Gen sequence
+
+Introduce here the stable id (Ex:ENSG00000165879) or the symbol (Ex:FRAT1) of the gen you want to get the sequence from:
+
+
+(5) Gen Info
+
+Introduce here the stable id (Ex:ENSG00000165879) or the symbol (Ex:FRAT1) of the gen you want to get the info from:
+
+
+(6) Gen calculations: length and percentage of all of its bases
+
+Introduce here the stable id (Ex:ENSG00000165879) or the symbol (Ex:FRAT1) of the gen you want to get the info from:
+
+
+(7) Genes in a specific chromosome region
+
+Introduce here the chromosome you want to get the info from:
+
+Introduce here the start position:
+
+Introduce here the end position:
+
+
+
+
+--------LIST SPECIES PAGE /listSpecies ENDPOINT--------
+
+---http://localhost:8000/listSpecies---
+
+---TERMINAL---
+
+GET /listSpecies HTTP/1.1
+127.0.0.1 - - [30/Apr/2019 22:31:57] "GET /listSpecies HTTP/1.1" 200 -
+
+---BROWSER---
+
+WELCOME TO THE SPECIES PAGE
+
+The available species in the ensambl database are:
+
+1. Normal: mesocricetus_auratus
+Common: Golden Hamster
+2. Normal: homo_sapiens
+Common: human
+3. Normal: monodelphis_domestica
+Common: gray short-tailed opossum
+4. Normal: amphiprion_percula
+Common: orange clownfish
+5. Normal: gadus_morhua
+Common: Atlantic cod
+6. Normal: procavia_capensis
+Common: cape rock hyrax
+7. Normal: dasypus_novemcinctus
+Common: nine-banded armadillo
+8. Normal: mola_mola
+Common: ocean sunfish
+9. Normal: mus_musculus_c57bl6nj
+Common: house mouse
+10. Normal: ursus_maritimus
+Common: Polar bear
+11. Normal: ornithorhynchus_anatinus
+Common: platypus
+12. Normal: pteropus_vampyrus
+Common: large flying fox
+13. Normal: scophthalmus_maximus
+Common: turbot
+14. Normal: echinops_telfairi
+Common: small Madagascar hedgehog
+15. Normal: aotus_nancymaae
+Common: Ma's night monkey
+16. Normal: marmota_marmota_marmota
+Common: Alpine marmot
+17. Normal: urocitellus_parryii
+Common: Arctic ground squirrel
+18. Normal: xiphophorus_maculatus
+Common: southern platyfish
+19. Normal: oryzias_latipes_hsok
+Common: Japanese medaka HSOK
+20. Normal: labrus_bergylta
+Common: ballan wrasse
+21. Normal: esox_lucius
+Common: northern pike
+22. Normal: petromyzon_marinus
+Common: sea lamprey
+23. Normal: anabas_testudineus
+Common: climbing perch
+24. Normal: cricetulus_griseus_crigri
+Common: Chinese hamster
+25. Normal: maylandia_zebra
+Common: zebra mbuna
+26. Normal: cricetulus_griseus_chok1gshd
+Common: Chinese hamster
+27. Normal: meriones_unguiculatus
+Common: Mongolian gerbil
+28. Normal: castor_canadensis
+Common: American beaver
+29. Normal: apteryx_owenii
+Common: little spotted kiwi
+30. Normal: neolamprologus_brichardi
+Common: lyretail cichlid
+31. Normal: xiphophorus_couchianus
+Common: Monterrey platyfish
+32. Normal: mus_musculus_wsbeij
+Common: western european house mouse
+33. Normal: cyanistes_caeruleus
+Common: blue tit
+34. Normal: otolemur_garnettii
+Common: small-eared galago
+35. Normal: mus_musculus_cbaj
+Common: house mouse
+36. Normal: capra_hircus
+Common: Goat
+37. Normal: rhinopithecus_roxellana
+Common: Golden snub-nosed monkey
+38. Normal: cynoglossus_semilaevis
+Common: tongue sole
+39. Normal: macaca_nemestrina
+Common: Pig-tailed macaque
+40. Normal: poecilia_mexicana
+Common: shortfin molly
+41. Normal: heterocephalus_glaber_female
+Common: naked mole-rat
+42. Normal: felis_catus
+Common: domestic cat
+43. Normal: numida_meleagris
+Common: helmeted guineafowl
+44. Normal: panthera_tigris_altaica
+Common: Tiger
+45. Normal: panthera_pardus
+Common: leopard
+46. Normal: choloepus_hoffmanni
+Common: Hoffmann's two-fingered sloth
+47. Normal: spermophilus_dauricus
+Common: Daurian ground squirrel
+48. Normal: poecilia_reticulata
+Common: guppy
+49. Normal: mus_pahari
+Common: Shrew mouse
+50. Normal: microcebus_murinus
+Common: gray mouse lemur
+51. Normal: astatotilapia_calliptera
+Common: eastern happy
+52. Normal: vicugna_pacos
+Common: alpaca
+53. Normal: mandrillus_leucophaeus
+Common: Drill
+54. Normal: junco_hyemalis
+Common: dark-eyed junco
+55. Normal: notamacropus_eugenii
+Common: tammar wallaby
+56. Normal: bos_taurus
+Common: cattle
+57. Normal: manacus_vitellinus
+Common: golden-collared manakin
+58. Normal: pan_troglodytes
+Common: chimpanzee
+59. Normal: sarcophilus_harrisii
+Common: Tasmanian devil
+60. Normal: microtus_ochrogaster
+Common: vole
+61. Normal: calidris_pygmaea
+Common: Spoon-billed sandpiper
+62. Normal: pygocentrus_nattereri
+Common: red-bellied piranha
+63. Normal: callithrix_jacchus
+Common: white-tufted-ear marmoset
+64. Normal: rattus_norvegicus
+Common: Norway rat
+65. Normal: ciona_savignyi
+Common: Sea squirt Ciona savignyi
+66. Normal: jaculus_jaculus
+Common: Lesser Egyptian jerboa
+67. Normal: erinaceus_europaeus
+Common: western European hedgehog
+68. Normal: stegastes_partitus
+Common: bicolor damselfish
+69. Normal: monopterus_albus
+Common: swamp eel
+70. Normal: hippocampus_comes
+Common: tiger tail seahorse
+71. Normal: ailuropoda_melanoleuca
+Common: giant panda
+72. Normal: zonotrichia_albicollis
+Common: white-throated sparrow
+73. Normal: gasterosteus_aculeatus
+Common: three-spined stickleback
+74. Normal: gambusia_affinis
+Common: western mosquitofish
+75. Normal: mus_spretus
+Common: algerian mouse
+76. Normal: sus_scrofa
+Common: pig
+77. Normal: haplochromis_burtoni
+Common: Burton's mouthbrooder
+78. Normal: gopherus_agassizii
+Common: Agassiz's desert tortoise
+79. Normal: pan_paniscus
+Common: bonobo
+80. Normal: xenopus_tropicalis
+Common: western clawed frog
+81. Normal: saccharomyces_cerevisiae
+Common: baker's yeast
+82. Normal: mus_musculus_aj
+Common: house mouse
+83. Normal: mus_musculus_129s1svimj
+Common: house mouse
+84. Normal: seriola_dumerili
+Common: greater amberjack
+85. Normal: dromaius_novaehollandiae
+Common: emu
+86. Normal: astyanax_mexicanus
+Common: Mexican tetra
+87. Normal: ciona_intestinalis
+Common: Sea squirt Ciona intestinalis
+88. Normal: nomascus_leucogenys
+Common: Northern white-cheeked gibbon
+89. Normal: mus_spicilegus
+Common: steppe mouse
+90. Normal: chelonoidis_abingdonii
+Common: Abingdon island giant tortoise
+91. Normal: ictalurus_punctatus
+Common: channel catfish
+92. Normal: cebus_capucinus
+Common: White-headed capuchin
+93. Normal: chinchilla_lanigera
+Common: Long-tailed chinchilla
+94. Normal: mus_musculus_nodshiltj
+Common: house mouse
+95. Normal: colobus_angolensis_palliatus
+Common: Angola colobus
+96. Normal: anolis_carolinensis
+Common: green anole
+97. Normal: lonchura_striata_domestica
+Common: Bengalese finch
+98. Normal: equus_caballus
+Common: horse
+99. Normal: octodon_degus
+Common: Degu
+100. Normal: periophthalmus_magnuspinnatus
+Common: Periophthalmus magnuspinnatus
+101. Normal: notechis_scutatus
+Common: mainland tiger snake
+102. Normal: drosophila_melanogaster
+Common: fruit fly
+103. Normal: salvator_merianae
+Common: Argentine black and white tegu
+104. Normal: ictidomys_tridecemlineatus
+Common: thirteen-lined ground squirrel
+105. Normal: vulpes_vulpes
+Common: red fox
+106. Normal: cricetulus_griseus_picr
+Common: Chinese hamster
+107. Normal: rhinopithecus_bieti
+Common: Black snub-nosed monkey
+108. Normal: mus_musculus_c3hhej
+Common: house mouse
+109. Normal: mus_musculus_fvbnj
+Common: house mouse
+110. Normal: myotis_lucifugus
+Common: little brown bat
+111. Normal: latimeria_chalumnae
+Common: coelacanth
+112. Normal: oryzias_latipes_hni
+Common: Japanese medaka HNI
+113. Normal: chrysemys_picta_bellii
+Common: Western painted turtle
+114. Normal: anas_platyrhynchos_platyrhynchos
+Common: common mallard
+115. Normal: coturnix_japonica
+Common: Japanese quail
+116. Normal: oryctolagus_cuniculus
+Common: rabbit
+117. Normal: prolemur_simus
+Common: greater bamboo lemur
+118. Normal: apteryx_rowi
+Common: Okarito brown kiwi
+119. Normal: bos_mutus
+Common: wild yak
+120. Normal: mus_musculus_balbcj
+Common: house mouse
+121. Normal: loxodonta_africana
+Common: African savanna elephant
+122. Normal: cyprinodon_variegatus
+Common: sheepshead minnow
+123. Normal: amphilophus_citrinellus
+Common: Midas cichlid
+124. Normal: acanthochromis_polyacanthus
+Common: spiny chromis
+125. Normal: oreochromis_niloticus
+Common: Nile tilapia
+126. Normal: sorex_araneus
+Common: European shrew
+127. Normal: paramormyrops_kingsleyae
+Common: Paramormyrops kingsleyae
+128. Normal: ochotona_princeps
+Common: American pika
+129. Normal: phascolarctos_cinereus
+Common: koala
+130. Normal: macaca_fascicularis
+Common: Crab-eating macaque
+131. Normal: scleropages_formosus
+Common: Asian bonytongue
+132. Normal: tupaia_belangeri
+Common: northern tree shrew
+133. Normal: propithecus_coquereli
+Common: Coquerel's sifaka
+134. Normal: anser_brachyrhynchus
+Common: pink-footed goose
+135. Normal: caenorhabditis_elegans
+Common: C.elegans
+136. Normal: mus_musculus_pwkphj
+Common: eastern european house mouse
+137. Normal: tursiops_truncatus
+Common: bottlenosed dolphin
+138. Normal: papio_anubis
+Common: Olive baboon
+139. Normal: calidris_pugnax
+Common: ruff
+140. Normal: chlorocebus_sabaeus
+Common: African green monkey
+141. Normal: bison_bison_bison
+Common: American bison
+142. Normal: canis_familiaris
+Common: dog
+143. Normal: mus_musculus_akrj
+Common: house mouse
+144. Normal: serinus_canaria
+Common: common canary
+145. Normal: meleagris_gallopavo
+Common: domestic turkey
+146. Normal: equus_asinus_asinus
+Common: donkey
+147. Normal: mus_caroli
+Common: Ryukyu mouse
+148. Normal: nothoprocta_perdicaria
+Common: birds
+149. Normal: apteryx_haastii
+Common: Great spotted kiwi
+150. Normal: cercocebus_atys
+Common: Sooty mangabey
+151. Normal: heterocephalus_glaber_male
+Common: naked mole-rat
+152. Normal: mus_musculus
+Common: house mouse
+153. Normal: amphiprion_ocellaris
+Common: clown anemonefish
+154. Normal: parus_major
+Common: Great Tit
+155. Normal: fukomys_damarensis
+Common: Damara mole rat
+156. Normal: theropithecus_gelada
+Common: gelada
+157. Normal: ovis_aries
+Common: Domestic sheep
+158. Normal: seriola_lalandi_dorsalis
+Common: yellowtail amberjack
+159. Normal: pogona_vitticeps
+Common: central bearded dragon
+160. Normal: oryzias_melastigma
+Common: Indian medaka
+161. Normal: mus_musculus_lpj
+Common: house mouse
+162. Normal: gorilla_gorilla
+Common: Western Lowland Gorilla
+163. Normal: ursus_americanus
+Common: American black bear
+164. Normal: oryzias_latipes
+Common: Japanese medaka HdrR
+165. Normal: piliocolobus_tephrosceles
+Common: Ugandan red Colobus
+166. Normal: mus_musculus_dba2j
+Common: house mouse
+167. Normal: cavia_aperea
+Common: Brazilian guinea pig
+168. Normal: takifugu_rubripes
+Common: torafugu
+169. Normal: danio_rerio
+Common: zebrafish
+170. Normal: lepidothrix_coronata
+Common: blue-crowned manakin
+171. Normal: eptatretus_burgeri
+Common: Inshore hagfish
+172. Normal: taeniopygia_guttata
+Common: zebra finch
+173. Normal: cavia_porcellus
+Common: domestic guinea pig
+174. Normal: pongo_abelii
+Common: Bornean orangutan
+175. Normal: melopsittacus_undulatus
+Common: Budgie
+176. Normal: carlito_syrichta
+Common: Philippine tarsier
+177. Normal: fundulus_heteroclitus
+Common: mummichog
+178. Normal: macaca_mulatta
+Common: rhesus monkey
+179. Normal: mus_musculus_casteij
+Common: south eastern house mouse
+180. Normal: peromyscus_maniculatus_bairdii
+Common: Northern American deer mouse
+181. Normal: dipodomys_ordii
+Common: Ord's kangaroo rat
+182. Normal: canis_lupus_dingo
+Common: dingo
+183. Normal: mastacembelus_armatus
+Common: zig-zag eel
+184. Normal: pelodiscus_sinensis
+Common: Chinese softshell turtle
+185. Normal: pundamilia_nyererei
+Common: Makobe Island cichlid
+186. Normal: gallus_gallus
+Common: chicken
+187. Normal: ficedula_albicollis
+Common: Collared flycatcher
+188. Normal: kryptolebias_marmoratus
+Common: mangrove rivulus
+189. Normal: mus_musculus_nzohlltj
+Common: house mouse
+190. Normal: lepisosteus_oculatus
+Common: Spotted gar
+191. Normal: neovison_vison
+Common: American mink
+192. Normal: sphenodon_punctatus
+Common: tuatara
+193. Normal: saimiri_boliviensis_boliviensis
+Common: Bolivian squirrel monkey
+194. Normal: mustela_putorius_furo
+Common: Domestic ferret
+195. Normal: tetraodon_nigroviridis
+Common: spotted green pufferfish
+196. Normal: poecilia_formosa
+Common: Amazon molly
+197. Normal: poecilia_latipinna
+Common: sailfin molly
+198. Normal: nannospalax_galili
+Common: Upper Galilee mountains blind mole rat
+199. Normal: crocodylus_porosus
+Common: Australian saltwater crocodile
+
+Click here to go to the home page
+
+
+
+---NO LIMIT---
+
+http://localhost:8000/listSpecies?limit=
+
+--TERMINAL--
+
+GET /listSpecies?limit= HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:22:04] "GET /listSpecies?limit= HTTP/1.1" 200 -
+
+--BROWSER--
+
+WELCOME TO THE SPECIES PAGE
+
+The available species in the ensambl database are:
+
+1. Normal: scleropages_formosus
+Common: Asian bonytongue
+2. Normal: callithrix_jacchus
+Common: white-tufted-ear marmoset
+3. Normal: capra_hircus
+Common: Goat
+4. Normal: aotus_nancymaae
+Common: Ma's night monkey
+5. Normal: panthera_pardus
+Common: leopard
+6. Normal: mus_musculus_pwkphj
+Common: eastern european house mouse
+7. Normal: ficedula_albicollis
+Common: Collared flycatcher
+8. Normal: heterocephalus_glaber_male
+Common: naked mole-rat
+9. Normal: ciona_intestinalis
+Common: Sea squirt Ciona intestinalis
+10. Normal: nothoprocta_perdicaria
+Common: birds
+11. Normal: mesocricetus_auratus
+Common: Golden Hamster
+12. Normal: cynoglossus_semilaevis
+Common: tongue sole
+13. Normal: lepidothrix_coronata
+Common: blue-crowned manakin
+14. Normal: nomascus_leucogenys
+Common: Northern white-cheeked gibbon
+15. Normal: mus_musculus_wsbeij
+Common: western european house mouse
+16. Normal: oryzias_latipes
+Common: Japanese medaka HdrR
+17. Normal: maylandia_zebra
+Common: zebra mbuna
+18. Normal: rhinopithecus_bieti
+Common: Black snub-nosed monkey
+19. Normal: colobus_angolensis_palliatus
+Common: Angola colobus
+20. Normal: paramormyrops_kingsleyae
+Common: Paramormyrops kingsleyae
+21. Normal: ursus_maritimus
+Common: Polar bear
+22. Normal: melopsittacus_undulatus
+Common: Budgie
+23. Normal: xenopus_tropicalis
+Common: western clawed frog
+24. Normal: numida_meleagris
+Common: helmeted guineafowl
+25. Normal: ictalurus_punctatus
+Common: channel catfish
+26. Normal: otolemur_garnettii
+Common: small-eared galago
+27. Normal: canis_familiaris
+Common: dog
+28. Normal: mustela_putorius_furo
+Common: Domestic ferret
+29. Normal: mus_musculus_lpj
+Common: house mouse
+30. Normal: poecilia_reticulata
+Common: guppy
+31. Normal: fundulus_heteroclitus
+Common: mummichog
+32. Normal: mus_musculus_dba2j
+Common: house mouse
+33. Normal: gambusia_affinis
+Common: western mosquitofish
+34. Normal: sorex_araneus
+Common: European shrew
+35. Normal: procavia_capensis
+Common: cape rock hyrax
+36. Normal: ictidomys_tridecemlineatus
+Common: thirteen-lined ground squirrel
+37. Normal: bos_mutus
+Common: wild yak
+38. Normal: ornithorhynchus_anatinus
+Common: platypus
+39. Normal: cebus_capucinus
+Common: White-headed capuchin
+40. Normal: cavia_porcellus
+Common: domestic guinea pig
+41. Normal: loxodonta_africana
+Common: African savanna elephant
+42. Normal: panthera_tigris_altaica
+Common: Tiger
+43. Normal: anolis_carolinensis
+Common: green anole
+44. Normal: amphilophus_citrinellus
+Common: Midas cichlid
+45. Normal: macaca_fascicularis
+Common: Crab-eating macaque
+46. Normal: dromaius_novaehollandiae
+Common: emu
+47. Normal: cricetulus_griseus_picr
+Common: Chinese hamster
+48. Normal: zonotrichia_albicollis
+Common: white-throated sparrow
+49. Normal: felis_catus
+Common: domestic cat
+50. Normal: mus_pahari
+Common: Shrew mouse
+51. Normal: haplochromis_burtoni
+Common: Burton's mouthbrooder
+52. Normal: carlito_syrichta
+Common: Philippine tarsier
+53. Normal: oryzias_latipes_hni
+Common: Japanese medaka HNI
+54. Normal: esox_lucius
+Common: northern pike
+55. Normal: ursus_americanus
+Common: American black bear
+56. Normal: phascolarctos_cinereus
+Common: koala
+57. Normal: mus_caroli
+Common: Ryukyu mouse
+58. Normal: seriola_dumerili
+Common: greater amberjack
+59. Normal: anabas_testudineus
+Common: climbing perch
+60. Normal: monopterus_albus
+Common: swamp eel
+61. Normal: xiphophorus_couchianus
+Common: Monterrey platyfish
+62. Normal: heterocephalus_glaber_female
+Common: naked mole-rat
+63. Normal: ovis_aries
+Common: Domestic sheep
+64. Normal: jaculus_jaculus
+Common: Lesser Egyptian jerboa
+65. Normal: cyanistes_caeruleus
+Common: blue tit
+66. Normal: echinops_telfairi
+Common: small Madagascar hedgehog
+67. Normal: dasypus_novemcinctus
+Common: nine-banded armadillo
+68. Normal: pundamilia_nyererei
+Common: Makobe Island cichlid
+69. Normal: pelodiscus_sinensis
+Common: Chinese softshell turtle
+70. Normal: calidris_pygmaea
+Common: Spoon-billed sandpiper
+71. Normal: marmota_marmota_marmota
+Common: Alpine marmot
+72. Normal: serinus_canaria
+Common: common canary
+73. Normal: cyprinodon_variegatus
+Common: sheepshead minnow
+74. Normal: macaca_mulatta
+Common: rhesus monkey
+75. Normal: amphiprion_ocellaris
+Common: clown anemonefish
+76. Normal: sus_scrofa
+Common: pig
+77. Normal: urocitellus_parryii
+Common: Arctic ground squirrel
+78. Normal: lepisosteus_oculatus
+Common: Spotted gar
+79. Normal: fukomys_damarensis
+Common: Damara mole rat
+80. Normal: mus_musculus_aj
+Common: house mouse
+81. Normal: cricetulus_griseus_chok1gshd
+Common: Chinese hamster
+82. Normal: ciona_savignyi
+Common: Sea squirt Ciona savignyi
+83. Normal: poecilia_mexicana
+Common: shortfin molly
+84. Normal: rattus_norvegicus
+Common: Norway rat
+85. Normal: mus_musculus_nodshiltj
+Common: house mouse
+86. Normal: petromyzon_marinus
+Common: sea lamprey
+87. Normal: meriones_unguiculatus
+Common: Mongolian gerbil
+88. Normal: gorilla_gorilla
+Common: Western Lowland Gorilla
+89. Normal: mus_spicilegus
+Common: steppe mouse
+90. Normal: saimiri_boliviensis_boliviensis
+Common: Bolivian squirrel monkey
+91. Normal: mus_musculus_nzohlltj
+Common: house mouse
+92. Normal: equus_caballus
+Common: horse
+93. Normal: chrysemys_picta_bellii
+Common: Western painted turtle
+94. Normal: nannospalax_galili
+Common: Upper Galilee mountains blind mole rat
+95. Normal: notamacropus_eugenii
+Common: tammar wallaby
+96. Normal: oreochromis_niloticus
+Common: Nile tilapia
+97. Normal: caenorhabditis_elegans
+Common: C.elegans
+98. Normal: peromyscus_maniculatus_bairdii
+Common: Northern American deer mouse
+99. Normal: monodelphis_domestica
+Common: gray short-tailed opossum
+100. Normal: bison_bison_bison
+Common: American bison
+101. Normal: danio_rerio
+Common: zebrafish
+102. Normal: oryzias_latipes_hsok
+Common: Japanese medaka HSOK
+103. Normal: theropithecus_gelada
+Common: gelada
+104. Normal: neovison_vison
+Common: American mink
+105. Normal: papio_anubis
+Common: Olive baboon
+106. Normal: mus_musculus_cbaj
+Common: house mouse
+107. Normal: rhinopithecus_roxellana
+Common: Golden snub-nosed monkey
+108. Normal: drosophila_melanogaster
+Common: fruit fly
+109. Normal: vulpes_vulpes
+Common: red fox
+110. Normal: mus_musculus_129s1svimj
+Common: house mouse
+111. Normal: mus_musculus_casteij
+Common: south eastern house mouse
+112. Normal: astatotilapia_calliptera
+Common: eastern happy
+113. Normal: crocodylus_porosus
+Common: Australian saltwater crocodile
+114. Normal: octodon_degus
+Common: Degu
+115. Normal: anser_brachyrhynchus
+Common: pink-footed goose
+116. Normal: cavia_aperea
+Common: Brazilian guinea pig
+117. Normal: mus_musculus_c3hhej
+Common: house mouse
+118. Normal: parus_major
+Common: Great Tit
+119. Normal: seriola_lalandi_dorsalis
+Common: yellowtail amberjack
+120. Normal: manacus_vitellinus
+Common: golden-collared manakin
+121. Normal: stegastes_partitus
+Common: bicolor damselfish
+122. Normal: piliocolobus_tephrosceles
+Common: Ugandan red Colobus
+123. Normal: pygocentrus_nattereri
+Common: red-bellied piranha
+124. Normal: anas_platyrhynchos_platyrhynchos
+Common: common mallard
+125. Normal: pongo_abelii
+Common: Bornean orangutan
+126. Normal: calidris_pugnax
+Common: ruff
+127. Normal: xiphophorus_maculatus
+Common: southern platyfish
+128. Normal: prolemur_simus
+Common: greater bamboo lemur
+129. Normal: equus_asinus_asinus
+Common: donkey
+130. Normal: scophthalmus_maximus
+Common: turbot
+131. Normal: dipodomys_ordii
+Common: Ord's kangaroo rat
+132. Normal: pogona_vitticeps
+Common: central bearded dragon
+133. Normal: takifugu_rubripes
+Common: torafugu
+134. Normal: notechis_scutatus
+Common: mainland tiger snake
+135. Normal: lonchura_striata_domestica
+Common: Bengalese finch
+136. Normal: mus_musculus_fvbnj
+Common: house mouse
+137. Normal: tupaia_belangeri
+Common: northern tree shrew
+138. Normal: mus_musculus_c57bl6nj
+Common: house mouse
+139. Normal: oryzias_melastigma
+Common: Indian medaka
+140. Normal: chelonoidis_abingdonii
+Common: Abingdon island giant tortoise
+141. Normal: pan_troglodytes
+Common: chimpanzee
+142. Normal: choloepus_hoffmanni
+Common: Hoffmann's two-fingered sloth
+143. Normal: meleagris_gallopavo
+Common: domestic turkey
+144. Normal: mus_musculus
+Common: house mouse
+145. Normal: apteryx_owenii
+Common: little spotted kiwi
+146. Normal: oryctolagus_cuniculus
+Common: rabbit
+147. Normal: macaca_nemestrina
+Common: Pig-tailed macaque
+148. Normal: poecilia_formosa
+Common: Amazon molly
+149. Normal: microcebus_murinus
+Common: gray mouse lemur
+150. Normal: chinchilla_lanigera
+Common: Long-tailed chinchilla
+151. Normal: tetraodon_nigroviridis
+Common: spotted green pufferfish
+152. Normal: propithecus_coquereli
+Common: Coquerel's sifaka
+153. Normal: salvator_merianae
+Common: Argentine black and white tegu
+154. Normal: astyanax_mexicanus
+Common: Mexican tetra
+155. Normal: mandrillus_leucophaeus
+Common: Drill
+156. Normal: coturnix_japonica
+Common: Japanese quail
+157. Normal: mus_musculus_akrj
+Common: house mouse
+158. Normal: mastacembelus_armatus
+Common: zig-zag eel
+159. Normal: pteropus_vampyrus
+Common: large flying fox
+160. Normal: homo_sapiens
+Common: human
+161. Normal: gopherus_agassizii
+Common: Agassiz's desert tortoise
+162. Normal: pan_paniscus
+Common: bonobo
+163. Normal: saccharomyces_cerevisiae
+Common: baker's yeast
+164. Normal: mus_spretus
+Common: algerian mouse
+165. Normal: tursiops_truncatus
+Common: bottlenosed dolphin
+166. Normal: gadus_morhua
+Common: Atlantic cod
+167. Normal: canis_lupus_dingo
+Common: dingo
+168. Normal: apteryx_haastii
+Common: Great spotted kiwi
+169. Normal: vicugna_pacos
+Common: alpaca
+170. Normal: amphiprion_percula
+Common: orange clownfish
+171. Normal: poecilia_latipinna
+Common: sailfin molly
+172. Normal: gallus_gallus
+Common: chicken
+173. Normal: sarcophilus_harrisii
+Common: Tasmanian devil
+174. Normal: mola_mola
+Common: ocean sunfish
+175. Normal: eptatretus_burgeri
+Common: Inshore hagfish
+176. Normal: taeniopygia_guttata
+Common: zebra finch
+177. Normal: periophthalmus_magnuspinnatus
+Common: Periophthalmus magnuspinnatus
+178. Normal: sphenodon_punctatus
+Common: tuatara
+179. Normal: spermophilus_dauricus
+Common: Daurian ground squirrel
+180. Normal: apteryx_rowi
+Common: Okarito brown kiwi
+181. Normal: erinaceus_europaeus
+Common: western European hedgehog
+182. Normal: myotis_lucifugus
+Common: little brown bat
+183. Normal: acanthochromis_polyacanthus
+Common: spiny chromis
+184. Normal: cricetulus_griseus_crigri
+Common: Chinese hamster
+185. Normal: neolamprologus_brichardi
+Common: lyretail cichlid
+186. Normal: gasterosteus_aculeatus
+Common: three-spined stickleback
+187. Normal: castor_canadensis
+Common: American beaver
+188. Normal: microtus_ochrogaster
+Common: vole
+189. Normal: cercocebus_atys
+Common: Sooty mangabey
+190. Normal: ailuropoda_melanoleuca
+Common: giant panda
+191. Normal: junco_hyemalis
+Common: dark-eyed junco
+192. Normal: bos_taurus
+Common: cattle
+193. Normal: latimeria_chalumnae
+Common: coelacanth
+194. Normal: mus_musculus_balbcj
+Common: house mouse
+195. Normal: hippocampus_comes
+Common: tiger tail seahorse
+196. Normal: ochotona_princeps
+Common: American pika
+197. Normal: chlorocebus_sabaeus
+Common: African green monkey
+198. Normal: labrus_bergylta
+Common: ballan wrasse
+199. Normal: kryptolebias_marmoratus
+Common: mangrove rivulus
+
+Click here to go to the home page
+
+---LIMIT = 5---
+
+http://localhost:8000/listSpecies?limit=5
+
+--TERMINAL--
+
+GET /listSpecies?limit=5 HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:24:21] "GET /listSpecies?limit=5 HTTP/1.1" 200 -
+
+--BROWSER--
+
+WELCOME TO THE SPECIES PAGE
+
+The available species in the ensambl database are:
+
+1. Normal: rhinopithecus_roxellana
+Common: Golden snub-nosed monkey
+2. Normal: apteryx_owenii
+Common: little spotted kiwi
+3. Normal: dromaius_novaehollandiae
+Common: emu
+4. Normal: myotis_lucifugus
+Common: little brown bat
+5. Normal: monopterus_albus
+Common: swamp eel
+
+Click here to go to the home page
+
+
+---WRONG VALUE/TYPE LIMIT---
+
+http://localhost:8000/listSpecies?limit=23T5G
+
+--TERMINAL--
+
+GET /listSpecies?limit=23T5G HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:26:24] "GET /listSpecies?limit=23T5G HTTP/1.1" 200
+
+--BROWSER--
+
+ERROR PAGE
+
+This is the error page :(
+
+Click here to go to the home page
+
+
+
+
+--------KARYOTYPE PAGE /karyotype ENDPOINT--------
+
+---CAT KARYOTYPE---
+
+http://localhost:8000/karyotype?specie=cat
+
+--TERMINAL--
+
+GET /karyotype?specie=cat HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:29:02] "GET /karyotype?specie=cat HTTP/1.1" 200 -
+
+--BROWSER--
+
+WELCOME TO THE KARYOTYPE PAGE
+
+The karyotype of the species cat:
+
+A1
+A2
+A3
+B1
+B2
+B3
+B4
+C1
+C2
+D1
+D2
+D3
+D4
+E1
+E2
+E3
+F1
+F2
+X
+MT
+
+
+---HUMAN KARYOTYPE---
+
+http://localhost:8000/karyotype?specie=homo+sapiens
+
+--TERMINAL--
+
+GET /karyotype?specie=homo+sapiens HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:31:02] "GET /karyotype?specie=homo+sapiens HTTP/1.1" 200 -
+
+--BROWSER--
+
+WELCOME TO THE KARYOTYPE PAGE
+
+The karyotype of the species homo sapiens:
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+X
+Y
+MT
+
+Click here to go to the home page
+
+
+---KARYOTYPE NOT AVAILABLE---
+
+http://localhost:8000/karyotype?specie=ELEPHANT
+
+--TERMINAL--
+
+GET /karyotype?specie=ELEPHANT HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:34:16] "GET /karyotype?specie=ELEPHANT HTTP/1.1" 200 -
+
+--BROWSER--
+
+WELCOME TO THE KARYOTYPE PAGE
+
+The karyotype of the species ELEPHANT:
+
+No info available for species ELEPHANT
+
+Click here to go to the home page
+
+
+---WRONG SPECIES/WRONG VALUE/NON VALUES/ WRONG INDEX---
+
+http://localhost:8000/karyotype?specie=velocirraptor
+
+--TERMINAL--
+
+GET /karyotype?specie=velocirraptor HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:37:28] "GET /karyotype?specie=velocirraptor HTTP/1.1" 200 -
+
+--BROWSER--
+
+ERROR PAGE
+
+This is the error page :(
+
+Click here to go to the home page
+
+
+
+
+--------CHROMOSOME LENGTH /chromosomeLength ENDPOINT--------
+
+---HUMAN CHROMOSOME X---
+
+http://localhost:8000/chromosomeLength?specie=human&chromo=x
+http://localhost:8000/chromosomeLength?chromo=x&specie=human
+
+
+--TERMINAL--
+
+GET /chromosomeLength?specie=human&chromo=x HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:40:48] "GET /chromosomeLength?specie=human&chromo=x HTTP/1.1" 200 -
+
+--BROWSER--
+
+WELCOME TO THE CHROMOSOME LENGTH PAGE
+
+The chromosome length of the chromosome X for species human:
+
+Length of the chromosome X is: 156040895
+
+Click here to go to the home page
+
+
+---CHICKEN CHROMOSOME 10---
+
+http://localhost:8000/chromosomeLength?specie=CHICKEN&chromo=10
+http://localhost:8000/chromosomeLength?chromo=10&specie=CHICKEN
+
+
+
+--TERMINAL--
+
+GET /chromosomeLength?specie=CHICKEN&chromo=10 HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:42:43] "GET /chromosomeLength?specie=CHICKEN&chromo=10 HTTP/1.1" 200 -
+
+--BROWSER--
+
+WELCOME TO THE CHROMOSOME LENGTH PAGE
+
+The chromosome length of the chromosome 10 for species CHICKEN:
+
+Length of the chromosome 10 is: 21119840
+
+Click here to go to the home page
+
+
+---INFO NOT AVAILABLE (RIGHT SPECIES BUT WRONG CHROMOSOME) HOUSE MOUSE CHROMOSOME 500---
+
+http://localhost:8000/chromosomeLength?specie=HOUSE+MOUSE&chromo=500
+
+--TERMINAL--
+
+GET /chromosomeLength?specie=HOUSE+MOUSE&chromo=500 HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:44:46] "GET /chromosomeLength?specie=HOUSE+MOUSE&chromo=500 HTTP/1.1" 200 -
+
+--BROWSER--
+
+WELCOME TO THE CHROMOSOME LENGTH PAGE
+
+The chromosome length of the chromosome 500 for species HOUSE MOUSE:
+
+No chromosome info found
+
+Click here to go to the home page
+
+
+---WRONG SPECIES/WRONG VALUE/WRONG INDEX/NON VALUES / CHROMOSOME 3 VELOCIRRAPTOR---
+
+http://localhost:8000/chromosomeLength?specie=VELOCIRRAPTOR&chromo=3
+
+--TERMINAL--
+
+GET /chromosomeLength?specie=VELOCIRRAPTOR&chromo=3 HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:46:54] "GET /chromosomeLength?specie=VELOCIRRAPTOR&chromo=3 HTTP/1.1" 200 -
+
+--BROWSER--
+
+ERROR PAGE
+
+This is the error page :(
+
+Click here to go to the home page
+
+
+
+
+--------GEN SEQUENCE /genSeq ENDPOINT--------
+
+---GEN SEQUENCE OF GEN TNF---
+
+http://localhost:8000/geneSeq?gene=tnf
+
+--TERMINAL--
+
+GET /geneSeq?gene=tnf HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:48:57] "GET /geneSeq?gene=tnf HTTP/1.1" 200 -
+
+--BROWSER--
+
+WELCOME TO THE GEN SEQUENCE PAGE
+
+The sequence of the gen TNF is:
+
+AGCAGACGCTCCCTCAGCAAGGACAGCAGAGGACCAGCTAAGAGGGAGAGAAGCAACTACAGACCCCCCCTGAAAACAACCCTCAGACGCCACATCCCCTGACAAGCTGCCAGGCAGGTTCTCTTCCTCTCACATACTGACCCACGGCTCCACCCTCTCTCCCCTGGAAAGGACACCATGAGCACTGAAAGCATGATCCGGGACGTGGAGCTGGCCGAGGAGGCGCTCCCCAAGAAGACAGGGGGGCCCCAGGGCTCCAGGCGGTGCTTGTTCCTCAGCCTCTTCTCCTTCCTGATCGTGGCAGGCGCCACCACGCTCTTCTGCCTGCTGCACTTTGGAGTGATCGGCCCCCAGAGGGAAGAGGTGAGTGCCTGGCCAGCCTTCATCCACTCTCCCACCCAAGGGGAAATGGAGACGCAAGAGAGGGAGAGAGATGGGATGGGTGAAAGATGTGCGCTGATAGGGAGGGATGGAGAGAAAAAAACGTGGAGAAAGACGGGGATGCAGAAAGAGATGTGGCAAGAGATGGGGAAGAGAGAGAGAGAAAGATGGAGAGACAGGATGTCTGGCACATGGAAGGTGCTCACTAAGTGTGTATGGAGTGAATGAATGAATGAATGAATGAACAAGCAGATATATAAATAAGATATGGAGACAGATGTGGGGTGTGAGAAGAGAGATGGGGGAAGAAACAAGTGATATGAATAAAGATGGTGAGACAGAAAGAGCGGGAAATATGACAGCTAAGGAGAGAGATGGGGGAGATAAGGAGAGAAGAAGATAGGGTGTCTGGCACACAGAAGACACTCAGGGAAAGAGCTGTTGAATGCCTGGAAGGTGAATACACAGATGAATGGAGAGAGAAAACCAGACACCTCAGGGCTAAGAGCGCAGGCCAGACAGGCAGCCAGCTGTTCCTCCTTTAAGGGTGACTCCCTCGATGTTAACCATTCTCCTTCTCCCCAACAGTTCCCCAGGGACCTCTCTCTAATCAGCCCTCTGGCCCAGGCAGTCAGTAAGTGTCTCCAAACCTCTTTCCTAATTCTGGGTTTGGGTTTGGGGGTAGGGTTAGTACCGGTATGGAAGCAGTGGGGGAAATTTAAAGTTTTGGTCTTGGGGGAGGATGGATGGAGGTGAAAGTAGGGGGGTATTTTCTAGGAAGTTTAAGGGTCTCAGCTTTTTCTTTTCTCTCTCCTCTTCAGGATCATCTTCTCGAACCCCGAGTGACAAGCCTGTAGCCCATGTTGTAGGTAAGAGCTCTGAGGATGTGTCTTGGAACTTGGAGGGCTAGGATTTGGGGATTGAAGCCCGGCTGATGGTAGGCAGAACTTGGAGACAATGTGAGAAGGACTCGCTGAGCTCAAGGGAAGGGTGGAGGAACAGCACAGGCCTTAGTGGGATACTCAGAACGTCATGGCCAGGTGGGATGTGGGATGACAGACAGAGAGGACAGGAACCGGATGTGGGGTGGGCAGAGCTCGAGGGCCAGGATGTGGAGAGTGAACCGACATGGCCACACTGACTCTCCTCTCCCTCTCTCCCTCCCTCCAGCAAACCCTCAAGCTGAGGGGCAGCTCCAGTGGCTGAACCGCCGGGCCAATGCCCTCCTGGCCAATGGCGTGGAGCTGAGAGATAACCAGCTGGTGGTGCCATCAGAGGGCCTGTACCTCATCTACTCCCAGGTCCTCTTCAAGGGCCAAGGCTGCCCCTCCACCCATGTGCTCCTCACCCACACCATCAGCCGCATCGCCGTCTCCTACCAGACCAAGGTCAACCTCCTCTCTGCCATCAAGAGCCCCTGCCAGAGGGAGACCCCAGAGGGGGCTGAGGCCAAGCCCTGGTATGAGCCCATCTATCTGGGAGGGGTCTTCCAGCTGGAGAAGGGTGACCGACTCAGCGCTGAGATCAATCGGCCCGACTATCTCGACTTTGCCGAGTCTGGGCAGGTCTACTTTGGGATCATTGCCCTGTGAGGAGGACGAACATCCAACCTTCCCAAACGCCTCCCCTGCCCCAATCCCTTTATTACCCCCTCCTTCAGACACCCTCAACCTCTTCTGGCTCAAAAAGAGAATTGGGGGCTTAGGGTCGGAACCCAAGCTTAGAACTTTAAGCAACAAGACCACCACTTCGAAACCTGGGATTCAGGAATGTGTGGCCTGCACAGTGAAGTGCTGGCAACCACTAAGAATTCAAACTGGGGCCTCCAGAACTCACTGGGGCCTACAGCTTTGATCCCTGACATCTGGAATCTGGAGACCAGGGAGCCTTTGGTTCTGGCCAGAATGCTGCAGGACTTGAGAAGACCTCACCTAGAAATTGACACAAGTGGACCTTAGGCCTTCCTCTCTCCAGATGTTTCCAGACTTCCTTGAGACACGGAGCCCAGCCCTCCCCATGGAGCCAGCTCCCTCTATTTATGTTTGCACTTGTGATTATTTATTATTTATTTATTATTTATTTATTTACAGATGAATGTATTTATTTGGGAGACCGGGGTATCCTGGGGGACCCAATGTAGGAGCTGCCTTGGCTCAGACATGTTTTCCGTGAAAACGGAGCTGAACAATAGGCTGTTCCCATGTAGCCCCCTGGCCTCTGTGCCTTCTTTTGATTATGTTTTTTAAAATATTTATCTGATTAAGTTGTCTAAACAATGCTGATTTGGTGACCAACTGTCACTCATTGCTGAGCCTCTGCTCCCCAGGGGAGTTGTGTCTGTAATCGCCCTACTATTCAGTGGCGAGAAATAAAGTTTGCTTAGAAAAGAAA
+
+Click here to go to the home page
+
+
+---GEN SEQUENCE OF GEN ENSG00000232810 (TNF ID)---
+
+http://localhost:8000/geneSeq?gene=ENSG00000232810
+
+--TERMINAL--
+
+GET /geneSeq?gene=ENSG00000232810 HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:51:11] "GET /geneSeq?gene=ENSG00000232810 HTTP/1.1" 200
+
+--BROWSER--
+
+WELCOME TO THE GEN SEQUENCE PAGE
+
+The sequence of the gen ENSG00000232810 is:
+
+AGCAGACGCTCCCTCAGCAAGGACAGCAGAGGACCAGCTAAGAGGGAGAGAAGCAACTACAGACCCCCCCTGAAAACAACCCTCAGACGCCACATCCCCTGACAAGCTGCCAGGCAGGTTCTCTTCCTCTCACATACTGACCCACGGCTCCACCCTCTCTCCCCTGGAAAGGACACCATGAGCACTGAAAGCATGATCCGGGACGTGGAGCTGGCCGAGGAGGCGCTCCCCAAGAAGACAGGGGGGCCCCAGGGCTCCAGGCGGTGCTTGTTCCTCAGCCTCTTCTCCTTCCTGATCGTGGCAGGCGCCACCACGCTCTTCTGCCTGCTGCACTTTGGAGTGATCGGCCCCCAGAGGGAAGAGGTGAGTGCCTGGCCAGCCTTCATCCACTCTCCCACCCAAGGGGAAATGGAGACGCAAGAGAGGGAGAGAGATGGGATGGGTGAAAGATGTGCGCTGATAGGGAGGGATGGAGAGAAAAAAACGTGGAGAAAGACGGGGATGCAGAAAGAGATGTGGCAAGAGATGGGGAAGAGAGAGAGAGAAAGATGGAGAGACAGGATGTCTGGCACATGGAAGGTGCTCACTAAGTGTGTATGGAGTGAATGAATGAATGAATGAATGAACAAGCAGATATATAAATAAGATATGGAGACAGATGTGGGGTGTGAGAAGAGAGATGGGGGAAGAAACAAGTGATATGAATAAAGATGGTGAGACAGAAAGAGCGGGAAATATGACAGCTAAGGAGAGAGATGGGGGAGATAAGGAGAGAAGAAGATAGGGTGTCTGGCACACAGAAGACACTCAGGGAAAGAGCTGTTGAATGCCTGGAAGGTGAATACACAGATGAATGGAGAGAGAAAACCAGACACCTCAGGGCTAAGAGCGCAGGCCAGACAGGCAGCCAGCTGTTCCTCCTTTAAGGGTGACTCCCTCGATGTTAACCATTCTCCTTCTCCCCAACAGTTCCCCAGGGACCTCTCTCTAATCAGCCCTCTGGCCCAGGCAGTCAGTAAGTGTCTCCAAACCTCTTTCCTAATTCTGGGTTTGGGTTTGGGGGTAGGGTTAGTACCGGTATGGAAGCAGTGGGGGAAATTTAAAGTTTTGGTCTTGGGGGAGGATGGATGGAGGTGAAAGTAGGGGGGTATTTTCTAGGAAGTTTAAGGGTCTCAGCTTTTTCTTTTCTCTCTCCTCTTCAGGATCATCTTCTCGAACCCCGAGTGACAAGCCTGTAGCCCATGTTGTAGGTAAGAGCTCTGAGGATGTGTCTTGGAACTTGGAGGGCTAGGATTTGGGGATTGAAGCCCGGCTGATGGTAGGCAGAACTTGGAGACAATGTGAGAAGGACTCGCTGAGCTCAAGGGAAGGGTGGAGGAACAGCACAGGCCTTAGTGGGATACTCAGAACGTCATGGCCAGGTGGGATGTGGGATGACAGACAGAGAGGACAGGAACCGGATGTGGGGTGGGCAGAGCTCGAGGGCCAGGATGTGGAGAGTGAACCGACATGGCCACACTGACTCTCCTCTCCCTCTCTCCCTCCCTCCAGCAAACCCTCAAGCTGAGGGGCAGCTCCAGTGGCTGAACCGCCGGGCCAATGCCCTCCTGGCCAATGGCGTGGAGCTGAGAGATAACCAGCTGGTGGTGCCATCAGAGGGCCTGTACCTCATCTACTCCCAGGTCCTCTTCAAGGGCCAAGGCTGCCCCTCCACCCATGTGCTCCTCACCCACACCATCAGCCGCATCGCCGTCTCCTACCAGACCAAGGTCAACCTCCTCTCTGCCATCAAGAGCCCCTGCCAGAGGGAGACCCCAGAGGGGGCTGAGGCCAAGCCCTGGTATGAGCCCATCTATCTGGGAGGGGTCTTCCAGCTGGAGAAGGGTGACCGACTCAGCGCTGAGATCAATCGGCCCGACTATCTCGACTTTGCCGAGTCTGGGCAGGTCTACTTTGGGATCATTGCCCTGTGAGGAGGACGAACATCCAACCTTCCCAAACGCCTCCCCTGCCCCAATCCCTTTATTACCCCCTCCTTCAGACACCCTCAACCTCTTCTGGCTCAAAAAGAGAATTGGGGGCTTAGGGTCGGAACCCAAGCTTAGAACTTTAAGCAACAAGACCACCACTTCGAAACCTGGGATTCAGGAATGTGTGGCCTGCACAGTGAAGTGCTGGCAACCACTAAGAATTCAAACTGGGGCCTCCAGAACTCACTGGGGCCTACAGCTTTGATCCCTGACATCTGGAATCTGGAGACCAGGGAGCCTTTGGTTCTGGCCAGAATGCTGCAGGACTTGAGAAGACCTCACCTAGAAATTGACACAAGTGGACCTTAGGCCTTCCTCTCTCCAGATGTTTCCAGACTTCCTTGAGACACGGAGCCCAGCCCTCCCCATGGAGCCAGCTCCCTCTATTTATGTTTGCACTTGTGATTATTTATTATTTATTTATTATTTATTTATTTACAGATGAATGTATTTATTTGGGAGACCGGGGTATCCTGGGGGACCCAATGTAGGAGCTGCCTTGGCTCAGACATGTTTTCCGTGAAAACGGAGCTGAACAATAGGCTGTTCCCATGTAGCCCCCTGGCCTCTGTGCCTTCTTTTGATTATGTTTTTTAAAATATTTATCTGATTAAGTTGTCTAAACAATGCTGATTTGGTGACCAACTGTCACTCATTGCTGAGCCTCTGCTCCCCAGGGGAGTTGTGTCTGTAATCGCCCTACTATTCAGTGGCGAGAAATAAAGTTTGCTTAGAAAAGAAA
+
+Click here to go to the home page
+
+
+---WRONG GEN/WRONG VALUE/WRONG INDEX/NON VALUE---
+
+http://localhost:8000/geneSeq?gene=
+
+--TERMINAL--
+
+GET /geneSeq?gene= HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:54:22] "GET /geneSeq?gene= HTTP/1.1" 200 -
+
+--BROWSER--
+
+ERROR PAGE
+
+This is the error page :(
+
+Click here to go to the home page
+
+
+
+
+
+--------GEN INFO /geneInfo ENDPOINT---------
+
+---TNF GEN INFO---
+
+http://localhost:8000/geneInfo?gene=tnf
+
+--TERMINAL--
+
+GET /geneInfo?gene=tnf HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:56:48] "GET /geneInfo?gene=tnf HTTP/1.1" 200 -
+
+--BROWSER--
+
+WELCOME TO THE GEN INFO PAGE
+
+GEN ID: ENSG00000232810
+
+GEN SYMBOL: TNF
+
+GEN SEQUENCE LENGTH: 2772
+
+CHROMOSOME WHERE THE GEN RESIDES: 6
+
+START: 31575565
+
+END: 31578336
+
+Click here to go to the home page
+
+
+---ENSG00000232810 GEN INFO---
+
+http://localhost:8000/geneInfo?gene=ENSG00000232810
+
+--TERMINAL--
+
+GET /geneInfo?gene=ENSG00000232810 HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 19:58:50] "GET /geneInfo?gene=ENSG00000232810 HTTP/1.1" 200
+
+--BROWSER--
+
+WELCOME TO THE GEN INFO PAGE
+
+GEN ID: ENSG00000232810
+
+GEN SYMBOL: TNF
+
+GEN SEQUENCE LENGTH: 2772
+
+CHROMOSOME WHERE THE GEN RESIDES: 6
+
+START: 31575565
+
+END: 31578336
+
+Click here to go to the home page
+
+
+---WRONG GEN/WRONG VALUE/WRONG INDEX/NON VALUE---
+
+http://localhost:8000/geneInfo?gene=EWRGEVA
+
+--TERMINAL--
+
+GET /geneInfo?gene=EWRGEVA HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 20:00:18] "GET /geneInfo?gene=EWRGEVA HTTP/1.1" 200 -
+
+--BROWSER--
+
+ERROR PAGE
+
+This is the error page :(
+
+Click here to go to the home page
+
+
+
+
+
+--------GEN CALCULATIONS /geneCalc ENDPOINT---------
+
+---TNF GEN---
+
+http://localhost:8000/geneCalc?gene=TNF
+
+--TERMINAL--
+
+GET /geneCalc?gene=TNF HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 20:01:24] "GET /geneCalc?gene=TNF HTTP/1.1" 200 -
+
+--BROWSER--
+
+WELCOME TO THE GEN CALCULATIONS PAGE
+
+GEN NAME: TNF
+
+GEN SEQUENCE LENGTH: 2772
+
+PERCENTAGE A: A : 25.6 %
+
+PERCENTAGE C: C : 24.5 %
+
+PERCENTAGE G: G : 28.3 %
+
+PERCENTAGE T: T : 21.6 %
+
+Click here to go to the home page
+
+
+---ENSG00000232810 GEN---
+
+http://localhost:8000/geneCalc?gene=ENSG00000232810
+
+--TERMINAL--
+
+GET /geneCalc?gene=ENSG00000232810 HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 20:03:31] "GET /geneCalc?gene=ENSG00000232810 HTTP/1.1" 200 -
+
+--BROWSER--
+
+WELCOME TO THE GEN CALCULATIONS PAGE
+
+GEN NAME: ENSG00000232810
+
+GEN SEQUENCE LENGTH: 2772
+
+PERCENTAGE A: A : 25.6 %
+
+PERCENTAGE C: C : 24.5 %
+
+PERCENTAGE G: G : 28.3 %
+
+PERCENTAGE T: T : 21.6 %
+
+Click here to go to the home page
+
+
+---WRONG GEN/WRONG VALUE/WRONG INDEX/NON VALUE---
+
+http://localhost:8000/geneCalc?gene=DWVFE
+
+--TERMINAL--
+
+GET /geneCalc?gene=DWVFE HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 20:04:38] "GET /geneCalc?gene=DWVFE HTTP/1.1" 200 -
+
+--BROWSER--
+
+ERROR PAGE
+
+This is the error page :(
+
+Click here to go to the home page
+
+
+
+
+
+--------CHROMOSOME GENES /geneList ENDPOINT---------
+
+---CHROMOSOME 7, START =140424943, END=140624564---
+
+http://localhost:8000/geneList?chromo=7&start=140424943&end=140624564
+
+--TERMINAL--
+
+GET /geneList?chromo=7&start=140424943&end=140624564 HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 20:06:41] "GET /geneList?chromo=7&start=140424943&end=140624564 HTTP/1.1" 200 -
+
+--BROWSER--
+
+WELCOME TO THE CHROMOSOME REGION PAGE
+
+CHROMOSOME: 7
+
+START POSITION: 140424943
+
+END POSITION: 140624564
+
+GENES:
+
+1. ID: ENSG00000146955
+Symbol: RAB19
+Description: RAB19, member RAS oncogene family [Source:HGNC Symbol;Acc:HGNC:19982]
+
+2. ID: ENSG00000103200
+Symbol: AC069335.1
+Description: non-metastatic cells 4, protein expressed in (NME4) pseudogene
+
+3. ID: ENSG00000133606
+Symbol: MKRN1
+Description: makorin ring finger protein 1 [Source:HGNC Symbol;Acc:HGNC:7112]
+
+4. ID: ENSG00000146966
+Symbol: DENND2A
+Description: DENN domain containing 2A [Source:HGNC Symbol;Acc:HGNC:22212]
+
+5. ID: ENSG00000201354
+Symbol: RF00019
+Description: None
+
+Click here to go to the home page
+
+
+---WRONG GEN/WRONG VALUE/WRONG INDEX/NON VALUE (CHROMOSOME 78 , START =140424943, END=140609955)---
+
+http://localhost:8000/geneList?chromo=78&start=140424943&end=140609955
+
+--TERMINAL--
+
+GET /geneList?chromo=78&start=140424943&end=140609955 HTTP/1.1
+127.0.0.1 - - [13/Apr/2019 20:08:33] "GET /geneList?chromo=78&start=140424943&end=140609955 HTTP/1.1" 200 -
+
+--BROWSER--
+
+ERROR PAGE
+
+This is the error page :(
+
+Click here to go to the home page
