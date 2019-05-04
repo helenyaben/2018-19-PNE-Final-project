@@ -144,6 +144,15 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
 
                         limit = form_list[1]
 
+                        plus_list =[]
+
+                        #Eliminate wrong introduced spaces
+                        for i in limit:
+                            if i != "+":
+                                plus_list.append(i)
+
+                        limit = ''.join(plus_list)
+
                         # LIST OF AVAILABLE SPECIES: We get the information about the server from the ensemble api documentation
 
                         server = "http://rest.ensembl.org"
@@ -257,6 +266,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                             if symbol in second_list[element]:
                                 second_list[element] = second_list[element].split(symbol)
                                 only_element = ' '.join(second_list[element])
+                                only_element = only_element.strip()
                                 second_list[element] = only_element
 
                         introduced_species = second_list[0]
@@ -334,6 +344,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                             if symbol in second_list[element]:
                                 second_list[element] = second_list[element].split(symbol)
                                 only_element = ' '.join(second_list[element])
+                                only_element = only_element.strip()
                                 second_list[element] = only_element
 
                         #The result will be the same if we write http://localhost:8000/chromosomeLength?chromo=4&specie=horse than
