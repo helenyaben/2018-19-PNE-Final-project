@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>INDEX PAGE</title>
+  </head>
+  <body style="background-color: violet;">
+    <h1>MAIN PAGE</h1>
+    <h2>Welcome to the ensembl analysis program</h2>
+    <p>Here you have some operations to perform:</p>
+    <form action="listSpecies" method="get">
+       <br>(1) List of species<br> <br>Click here to know the available species in the ensembl database<br>
+        Set a number of maximum species you want to get (optional): <input type="text" name="limit"><br>
+        <input type="submit" value="Obtain species list">
+    </form>
+    <form action="karyotype" method="get">
+        <br><br>(2) Karyotype <br><br>Introduce here the species you want to get the karyotype from: <input type="text" name="specie"><br>
+        <input type="submit" value="Obtain karyotype">
+
+    </form>
+    <form action ="chromosomeLength" method ="get">
+        <br><br> (3) Chromosome length <br><br> Introduce here the species you want to get the info from: <input type="text" name="specie"><br>
+        <br> Introduce here the chromosome you want to analyze: <input type="text" name="chromo"><br>
+        <input type="submit" value="Obtain chromosome length">
+    </form>
+
+    <form action ='geneSeq' method="get">
+        <br><br>(4) Gen sequence <br><br> Introduce here the stable id (Ex:ENSG00000165879) or the symbol (Ex:FRAT1) of the gen you want to get the sequence from:
+        <input type="text" name="gene"><br>
+        <input type="submit" value="Obtain the gen sequence">
+    </form>
+    <form action="geneInfo" method="get">
+        <br><br>(5) Gen Info <br><br> Introduce here the stable id (Ex:ENSG00000165879) or the symbol (Ex:FRAT1) of the gen you want to get the info from:
+        <input type="text" name="gene"><br>
+        <input type="submit" value="Obtain the gen info">
+    </form>
+    <form action="geneCalc" method="get">
+        <br><br>(6) Gen calculations: length and percentage of all of its bases<br><br> Introduce here the stable id (Ex:ENSG00000165879) or the symbol (Ex:FRAT1) of the gen you want to get the info from:
+        <input type="text" name="gene"><br>
+        <input type="submit" value="Obtain the gen calculations ">
+    </form>
+    <form action='geneList' method="get">
+        <br><br>(7) Genes in a specific chromosome region<br><br> Introduce here the chromosome you want to get the info from:
+        <input type="text" name="chromo"><br>
+        <br>Introduce here the start position:
+        <input type="text" name="start"><br>
+        <br> Introduce here the end position:
+        <input type="text" name="end"><br>
+        <input type="submit" value="Obtain the genes in the region">
+    </form>
+  </body>
+</html>
