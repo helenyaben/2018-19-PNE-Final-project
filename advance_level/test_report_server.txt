@@ -3719,52 +3719,9 @@ THIS IS THE COPY/PASTE OF THE DATA WITHOUT PROCESSING!!!!!!! IN THE BROWSER APPE
 
 
 {
-    "len": [
-        "Length of the chromosome X is: 156040895"
-    ]
+    "len": 133797422
 }
 
-
-
----INFO NOT AVAILABLE (RIGHT SPECIES BUT WRONG CHROMOSOME) HOUSE MOUSE CHROMOSOME 500 (HTML)---
-
-http://localhost:8000/chromosomeLength?specie=HOUSE+MOUSE&chromo=500
-
---TERMINAL--
-
-GET /chromosomeLength?specie=HOUSE+MOUSE&chromo=500 HTTP/1.1
-127.0.0.1 - - [14/Apr/2019 00:09:37] "GET /chromosomeLength?specie=HOUSE+MOUSE&chromo=500 HTTP/1.1" 200 -
-
---BROWSER--
-
-WELCOME TO THE CHROMOSOME LENGTH PAGE
-
-The chromosome length of the chromosome 500 for species HOUSE MOUSE:
-
-No chromosome info found
-
-Click here to go to the home page
-
-
-
----INFO NOT AVAILABLE (RIGHT SPECIES BUT WRONG CHROMOSOME) HOUSE MOUSE CHROMOSOME 500 (JSON)---
-
-http://localhost:8000/chromosomeLength?specie=HOUSE+MOUSE&chromo=500&json=1
-
---TERMINAL--
-
-GET /chromosomeLength?specie=HOUSE+MOUSE&chromo=500&json=1 HTTP/1.1
-127.0.0.1 - - [14/Apr/2019 00:10:50] "GET /chromosomeLength?specie=HOUSE+MOUSE&chromo=500&json=1 HTTP/1.1" 200 -
-
---BROWSER--
-
-THIS IS THE COPY/PASTE OF THE DATA WITHOUT PROCESSING!!!!!!! IN THE BROWSER APPEARS IN JSON (CHECK IT WITH THE URL)
-
-{
-    "len": [
-        "No chromosome info found"
-    ]
-}
 
 
 
