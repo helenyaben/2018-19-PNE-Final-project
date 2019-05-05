@@ -3685,7 +3685,7 @@ Click here to go to the home page
 ---HUMAN CHROMOSOME X(HTML)---
 
 http://localhost:8000/chromosomeLength?specie=human&chromo=x
-http://localhost:8000/chromosomeLength?chromo=10&specie=homo+sapiens
+http://localhost:8000/chromosomeLength?chromo=x&specie=homo+sapiens
 
 --TERMINAL--
 
