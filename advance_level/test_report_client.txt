@@ -113,7 +113,7 @@ http://localhost:8000/chromosomeLength?specie=cat&chromo=b2 check HTML:
 
 http://localhost:8000/chromosomeLength?specie=cat&chromo=b2&json=1 check JSON:
 
-{'len': ['Length of the chromosome B2 is: 155302638']}
+{'len': 155302638}
 
 http://localhost:8000/geneSeq?gene=FRAT2 check HTML:
 
