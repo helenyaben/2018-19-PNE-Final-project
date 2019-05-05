@@ -1,3 +1,17 @@
+"""
+CLIENT: ADVANCE LEVEL
+
+This is the client, remember to execute the server to be able to execute the client. This client will make different
+requests to the server, two per endpoint:
+
+1. Without json=1 parameter: to obtain HTML response
+2. With json=1 parameter: to obtain JSON response
+
+You can also check to obtain the same output using the browser with the url's below.
+
+"""
+
+
 import requests as req
 
 print()
