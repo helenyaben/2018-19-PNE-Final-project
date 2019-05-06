@@ -3706,7 +3706,7 @@ Click here to go to the home page
 ---HUMAN CHROMOSOME X(JSON)---
 
 http://localhost:8000/chromosomeLength?specie=human&chromo=x&json=1
-http://localhost:8000/chromosomeLength?chromo=10&specie=homo+sapiens&json=1
+http://localhost:8000/chromosomeLength?chromo=x&specie=homo+sapiens&json=1
 
 --TERMINAL--
 
