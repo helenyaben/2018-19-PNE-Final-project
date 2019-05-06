@@ -134,6 +134,12 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
             # Now, if the request starts with /listSpecies or /karyotype or /chromosomeLength, which occurs when we submit a message, then the thing is different
             elif self.path.startswith("/listSpecies") or self.path.startswith("/karyotype") or self.path.startswith("/chromosomeLength"):
 
+                url = self.path
+
+                # Check endpoint
+                endpoint_list = url.split("?")
+                endpoint = endpoint_list[0]
+
                 # Now we are going to make a list from the path in order to be able to work with different resources
                 resource_list = self.path.split("?", 1)
                 resource_list = resource_list[1]
@@ -148,8 +154,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     sep_plist= parameter_list[element].split("=")
                     new_plist.append(sep_plist[0])
 
-
-                if self.path.startswith("/listSpecies") and new_plist[0]=="limit":
+                if endpoint == "/listSpecies" and new_plist[0]=="limit":
 
                     try:
                         # Has the client set a limit?
@@ -255,7 +260,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         contents = f.read()
                         f.close()
 
-                elif self.path.startswith("/karyotype") and new_plist[0]=="specie":
+                elif endpoint == "/karyotype" and new_plist[0]=="specie":
 
                     # It's possible that the species does not exit, so we make a try/except to avoid arising errors
 
@@ -340,7 +345,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         contents = f.read()
                         f.close()
 
-                elif self.path.startswith("/chromosomeLength") and (new_plist[0]== 'specie' or new_plist[0]== 'chromo') and (new_plist[1]== 'chromo' or new_plist[1] == 'specie'):
+                elif endpoint == "/chromosomeLength" and (new_plist[0]== 'specie' or new_plist[0]== 'chromo') and (new_plist[1]== 'chromo' or new_plist[1] == 'specie'):
 
                     try:
                         # Transform the request path into something we can work with
