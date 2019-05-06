@@ -48,7 +48,7 @@ import termcolor
 import requests, sys
 import json
 
-socketserver.TCPServer.allow_reuse_address = True
+
 
 # Now we define the server's port
 PORT = 8000
