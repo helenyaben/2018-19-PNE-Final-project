@@ -140,7 +140,16 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                 form_list = resource_list.split("=", 1)
                 #form_list[0] allows us to get the first parameter of our path and then work with different responses depending on the resources
 
-                if self.path.startswith("/listSpecies"):
+                #For checking parameters:
+                parameter_list = resource_list.split("&")
+                new_plist=[]
+
+                for element in range(len(parameter_list)):
+                    sep_plist= parameter_list[element].split("=")
+                    new_plist.append(sep_plist[0])
+
+
+                if self.path.startswith("/listSpecies") and new_plist[0]=="limit":
 
                     try:
                         # Has the client set a limit?
@@ -246,7 +255,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         contents = f.read()
                         f.close()
 
-                elif self.path.startswith("/karyotype"):
+                elif self.path.startswith("/karyotype") and new_plist[0]=="specie":
 
                     # It's possible that the species does not exit, so we make a try/except to avoid arising errors
 
@@ -331,7 +340,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         contents = f.read()
                         f.close()
 
-                elif self.path.startswith("/chromosomeLength"):
+                elif self.path.startswith("/chromosomeLength") and (new_plist[0]== 'specie' or new_plist[0]== 'chromo') and (new_plist[1]== 'chromo' or new_plist[1] == 'specie'):
 
                     try:
                         # Transform the request path into something we can work with
