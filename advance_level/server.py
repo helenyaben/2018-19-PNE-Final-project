@@ -197,6 +197,10 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
 
                 url = self.path
 
+                #Check endpoint
+                endpoint_list = url.split("?")
+                endpoint = endpoint_list[0]
+
                 # In order to not disturb our previous code we will remove the json parameter in case it is present
                 if self.path.endswith("&json=1"):
                     url = url[:url.find("&json=1")]
@@ -206,7 +210,15 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                 resource_list = resource_list[1]
                 form_list = resource_list.split("=", 1)
 
-                if self.path.startswith("/listSpecies"):
+                # For checking parameters:
+                parameter_list = resource_list.split("&")
+                new_plist = []
+
+                for element in range(len(parameter_list)):
+                    sep_plist = parameter_list[element].split("=")
+                    new_plist.append(sep_plist[0])
+
+                if endpoint == "/listSpecies" and new_plist[0] == "limit":
 
                     try:
                         # Has the client set a limit?
@@ -349,7 +361,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         f.close()
 
 
-                elif self.path.startswith("/karyotype"):
+                elif endpoint =="/karyotype" and new_plist[0]== 'specie':
 
                     # It's possible that the species does not exit, so we make a try/except to avoid arising errors
 
@@ -456,7 +468,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         contents = f.read()
                         f.close()
 
-                elif self.path.startswith("/chromosomeLength"):
+                elif endpoint == "/chromosomeLength" and (new_plist[0]== 'specie' or new_plist[0]== 'chromo') and (new_plist[1]== 'chromo' or new_plist[1] == 'specie'):
 
                     try:
                         # Transform the request path into something we can work with
@@ -602,7 +614,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         contents = f.read()
                         f.close()
 
-                elif self.path.startswith("/geneSeq"):
+                elif endpoint == "/geneSeq" and new_plist[0] == "gene":
 
                     try:
                         gen_name = form_list[1]
@@ -719,7 +731,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         contents = f.read()
                         f.close()
 
-                elif self.path.startswith("/geneInfo"):
+                elif endpoint == "/geneInfo" and new_plist[0] == "gene":
 
                     try:
                         gen_name = form_list[1]
@@ -863,7 +875,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         contents = f.read()
                         f.close()
 
-                elif self.path.startswith("/geneCalc"):
+                elif endpoint == "/geneCalc" and new_plist[0] == "gene":
 
                     try:
 
@@ -995,7 +1007,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                         contents = f.read()
                         f.close()
 
-                elif self.path.startswith("/geneList"):
+                elif endpoint =="/geneList" and new_plist[0] == "chromo" and new_plist[1] == "start" and new_plist[2] == "end":
 
                     try:
 
